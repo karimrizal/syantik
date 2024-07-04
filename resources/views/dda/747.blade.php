@@ -1,0 +1,233 @@
+@extends('back-end/layouts/main')
+
+@section('container')
+                      
+           
+<div class="card mb-4">
+<div class="card-header">    </div>
+    
+                     
+	
+	<div class="card-body">
+						
+	@if (session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                            @endif
+         
+               <br>
+               <p class="page-title text-left"><a href="data_dda"><i class="lnr lnr-arrow-left-circle"></i> Kembali</a></p>
+                           <br>
+                            <hr><a href="{{ url('/export_747') }}"><button type="button" class="btn btn-primary btn-md">Unduh Template</button></a>	
+                            <a href="{{ url('/ekspor_747') }}"><button type="button" class="btn btn-primary" style="float: right;background-color:#006fcc;">Ekspor Excel</button></a>
+<br>
+<br>    
+					@foreach($kab as $a)	
+					@if( (Auth::user()->idkab == '7400') )
+<h3 class="panel-title" style="font-weight: 500; font-size: 20px; color: #006fcc;"> Jumlah Penyediaan Rumah Layak Huni bagi Korban Relokasi Pembangunan Pemerintah Provinsi Sulawesi Tenggara, 2020-2022 </h3>
+@else
+<h3 class="panel-title" style="font-weight: 500; font-size: 20px; color: #006fcc;">Jumlah Kantor Pos Pembantu Menurut Kecamatan di {{ $a->kab }}, {{$year}}</h3>
+@endif
+@endforeach				
+<br>
+
+
+<table class="table table-bordered" id="example3">
+                <thead>
+                    
+                
+                    <tr>
+                        
+                  
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" rowspan = "2" > <center>Tahun</center></th>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" colspan = "7" > <center>Kriteria Perumahan Bagi Korban Relokasi</center></th>
+                        </tr>
+                        
+                        <tr>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Bangunan gedung (unit)</center></th>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Jalan lingkungan (meter)</center></th>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Penyediaan air minum (unit)</center></th>
+                        
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Drainase lingkungan (meter)</center></th>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Pengelolaan air limbah (unit)</center></th>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Pengelolaan persampahan (unit)</center></th>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Proteksi kebakaran (unit)</center></th>
+                    
+                  
+       
+                      
+                    </tr>
+                  
+                    
+                   
+            </thead>
+            
+                     @foreach ($tabel_747 as $i => $member)
+                    <tr>
+                     
+                        <th>{{ $member->kec }}</th>
+                        
+                         <form id="simpan" action="{{ route('dda.store747') }}" method="POST">
+                             @csrf
+                             
+                            
+                              <input type="hidden" style="padding-right: 8px;padding-left: 8px;" name="members[{{ $i }}][id]" id="id" value="{{$member->id}}">
+                         
+                           <input type="hidden" id="updated_at" name="members[{{ $i }}][updated_at]" class="form-control"  value={{ \Carbon\Carbon::now() }} >  
+                          
+                             @if(is_numeric($member->t747a))
+                            <td>
+                                <input type="text" id="t747a" name="members[{{ $i }}][t747a]" class="form-control" value="{{number_format(($member->t747a),0, '.','')}}">
+                            </td>
+                           
+                           @else
+                              <td>
+                                <input type="text" id="t747a" name="members[{{ $i }}][t747a]" class="form-control" value="{{$member->t747a}}">
+                            </td>
+                            @endif    
+                            
+                            
+                            @if(is_numeric($member->t747b))
+                            <td>
+                                <input type="text" id="t747b" name="members[{{ $i }}][t747b]" class="form-control" value="{{number_format(($member->t747b),0, '.','')}}">
+                            </td>
+                           
+                           @else
+                              <td>
+                                <input type="text" id="t747b" name="members[{{ $i }}][t747b]" class="form-control" value="{{$member->t747b}}">
+                            </td>
+                            @endif
+                            
+                            @if(is_numeric($member->t747c))
+                            <td>
+                                <input type="text" id="t747c" name="members[{{ $i }}][t747c]" class="form-control" value="{{number_format(($member->t747c),0, '.','')}}">
+                            </td>
+                           
+                           @else
+                              <td>
+                                <input type="text" id="t747c" name="members[{{ $i }}][t747c]" class="form-control" value="{{$member->t747c}}">
+                            </td>
+                            @endif
+                            
+                            @if(is_numeric($member->t747d))
+                            <td>
+                                <input type="text" id="t747d" name="members[{{ $i }}][t747d]" class="form-control" value="{{number_format(($member->t747d),0, '.','')}}">
+                            </td>
+                           
+                           @else
+                              <td>
+                                <input type="text" id="t747d" name="members[{{ $i }}][t747d]" class="form-control" value="{{$member->t747d}}">
+                            </td>
+                            @endif
+                            
+                            @if(is_numeric($member->t747e))
+                            <td>
+                                <input type="text" id="t747e" name="members[{{ $i }}][t747e]" class="form-control" value="{{number_format(($member->t747e),0, '.','')}}">
+                            </td>
+                           
+                           @else
+                              <td>
+                                <input type="text" id="t747e" name="members[{{ $i }}][t747e]" class="form-control" value="{{$member->t747e}}">
+                            </td>
+                            @endif
+                            
+                            @if(is_numeric($member->t747f))
+                            <td>
+                                <input type="text" id="t747f" name="members[{{ $i }}][t747f]" class="form-control" value="{{number_format(($member->t747f),0, '.','')}}">
+                            </td>
+                           
+                           @else
+                              <td>
+                                <input type="text" id="t747f" name="members[{{ $i }}][t747f]" class="form-control" value="{{$member->t747f}}">
+                            </td>
+                            @endif
+                            
+                            
+                            @if(is_numeric($member->t747g))
+                            <td>
+                                <input type="text" id="t747g" name="members[{{ $i }}][t747g]" class="form-control" value="{{number_format(($member->t747g),0, '.','')}}">
+                            </td>
+                           
+                           @else
+                              <td>
+                                <input type="text" id="t747g" name="members[{{ $i }}][t747g]" class="form-control" value="{{$member->t747g}}">
+                            </td>
+                            @endif
+          
+                      
+                    </tr>
+                    @endforeach
+                     <tr>
+                        
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;"><center>Jumlah</center></th>
+                        
+                         
+                            
+                         @foreach ($sum_lk as $a)
+                              <th bgcolor="#5cb85c" style="vertical-align: middle;">
+                            <input  type ="text" class="form-control" readonly="ture"  value= "{{ number_format(($a->sum_a),0, '.',' ')}}">
+                            </th>
+                            <th bgcolor="#5cb85c" style="vertical-align: middle;">
+                            <input  type ="text" class="form-control" readonly="ture"  value= "{{ number_format(($a->sum_b),0, '.',' ')}}">
+                            </th>
+                            <th bgcolor="#5cb85c" style="vertical-align: middle;">
+                            <input  type ="text" class="form-control" readonly="ture"  value= "{{ number_format(($a->sum_c),0, '.',' ')}}">
+                            </th>
+                            <th bgcolor="#5cb85c" style="vertical-align: middle;">
+                            <input  type ="text" class="form-control" readonly="ture"  value= "{{ number_format(($a->sum_d),0, '.',' ')}}">
+                            </th>
+                            <th bgcolor="#5cb85c" style="vertical-align: middle;">
+                            <input  type ="text" class="form-control" readonly="ture"  value= "{{ number_format(($a->sum_e),0, '.',' ')}}">
+                            </th>
+                            <th bgcolor="#5cb85c" style="vertical-align: middle;">
+                            <input  type ="text" class="form-control" readonly="ture"  value= "{{ number_format(($a->sum_f),0, '.',' ')}}">
+                            </th>
+                            <th bgcolor="#5cb85c" style="vertical-align: middle;">
+                            <input  type ="text" class="form-control" readonly="ture"  value= "{{ number_format(($a->sum_g),0, '.',' ')}}">
+                            </th>
+              
+                      
+                            @endforeach
+                      
+                       
+                      
+                    </tr>
+                    
+    </table>
+    
+    
+    <br>
+    
+<p style="font-size: 14px;color: #8D99A8;">Sumber: Dinas Perumahan Rakyat, Kawasan Permukiman & Pertanahan</a></p>
+
+     <br>
+     
+     <div class="form-group">
+         @foreach($catatan as $a)
+            <label for ="catatan"><b> Catatan</b> </label>
+             	 		
+          <textarea name="catatan" id="catatan" >
+              {!! $a->catatan !!}
+                 @endforeach
+            </textarea>
+            </div>
+                    <button type="submit" class="btn btn-primary show_confirm">Kirim</button>
+						</form>
+
+
+
+
+						
+	</div>
+</div>
+					<!-- END OVERVIEW -->
+		
+
+
+    
+
+	@endsection
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+ 
+ 

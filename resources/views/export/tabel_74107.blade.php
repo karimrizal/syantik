@@ -1,0 +1,76 @@
+<table style="table-layout: fixed; width: 100%">
+    <tr>
+        <th style="font-weight: 100; color: #006fcc; word-wrap: break-word" >
+            
+        
+       @foreach($kab as $a)
+         @if( (Auth::user()->idkab == '7400') )
+Data Kerusakan Kawasan Hutan di Provinsi Sulawesi Tenggara, {{$year}}
+@else
+Jumlah Kantor Pos Pembantu Menurut Kecamatan di {{ $a->kab }}, {{$year}}
+@endif
+@endforeach	
+</th>
+<br>
+    </tr>
+           
+           <tr>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Kabupaten/Kota</center></th>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Illegal Logging</center></th>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Kebakaran Hutan</center></th>
+                        
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Kegiatan Non Kehutanan</center></th>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Perambahan</center></th>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Konflik Tenurial</center></th>
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;" > <center>Jumlah</center></th>
+                    
+                  
+       
+                      
+                    </tr>
+                    
+             
+          
+                   @foreach ($tabel_74107 as $member)
+                    <tr>
+                       
+                        <th >{{ $member->kec }}</th>
+                    <td> {{ $member->t74107a }} </td>
+                    <td> {{ $member->t74107b }} </td>
+                    <td> {{ $member->t74107c }} </td>
+                    <td> {{ $member->t74107d }} </td>
+                    <td> {{ $member->t74107e }} </td>
+                    <td> {{ $member->t74107f }} </td>
+              
+              
+               
+              
+                      
+                      
+                       
+                      
+                    </tr>
+                    @endforeach
+                    
+                    <tr>
+                        
+                        <th bgcolor="#5cb85c" style="vertical-align: middle;">Jumlah</th>
+                        @foreach ($sum_lk as $member)
+                   
+                   <td> {{ $member->sum_a }} </td>
+                   <td> {{ $member->sum_b }} </td>
+                   <td> {{ $member->sum_c }} </td>
+                   <td> {{ $member->sum_d }} </td>
+                   <td> {{ $member->sum_e }} </td>
+                   <td> {{ $member->sum_f }} </td>
+      
+                   
+           
+                
+                  
+                       @endforeach
+                    </tr>
+                     
+                   
+                
+    </table>

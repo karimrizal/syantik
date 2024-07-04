@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Data | Syantik - Sistem Pelayanan Pembinaan Statistik Sektoral</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<link rel="stylesheet" href="assets/vendor/chartist/css/chartist-custom.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/button.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+</head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="index.html" style="font-size: 12px;"><img src="assets/img/logo-dark.svg" alt="Syantik Logo" class="img-responsive logo"><span>Sistem Layanan Pembinaan Statistik Sektoral</span></a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn">
+					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-chevron-left-circle"></i></button>
+				</div>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="index.html" class="a"><i class="lnr lnr-home"></i> <span>Beranda</span></a></li>
+						<li><a href="data.html" class="active"><i class="lnr lnr-chart-bars"></i> <span>Data</span></a></li>
+						<li>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-database"></i> <span>Metadata</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages" class="collapse ">
+								<ul class="nav nav">
+									<li><a href="metadata-kegiatan.html" class=""><i class="lnr lnr-database"></i>Metadata Kegiatan</a></li>
+									<li><a href="metadata-indikator.html" class=""><i class="lnr lnr-database"></i>Metadata Indikator</a></li>
+									<li><a href="metadata-variabel.html" class=""><i class="lnr lnr-database"></i>Metadata Variabel</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="modul-belajar.html" class=""><i class="lnr lnr-book"></i> <span>Modul Pembelajaran</span></a></li>
+						<li><a href="rekomendasi.html" class=""><i class="lnr lnr-file-empty"></i> <span>Rekomendasi</span></a></li>
+						<li><a href="konsultasi.html" class=""><i class="lnr lnr-bubble"></i> <span>Konsultasi</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+
+						<div class="panel panel-headline">
+							<div class="panel-body">
+								<h3 style="font-weight: 500; font-size: 20px; color: #006fcc;">Cari Data</h3>
+								<br/>
+								
+								<div class="row">
+									<!-- <div class="col-md-4">
+										<p style="font-size: 14px;color: #8D99A8;">Pilih Wilayah</p>
+										<select class="form-control">
+											<option value="Sulawesi Tenggara">Provinsi Sulawesi Tenggara</option>
+											<option value="Kab1">Kabupaten Buton</option>
+											<option value="Kab2">Kabupaten Muna</option>
+											<option value="Kab3">Kabupaten Kolaka</option>
+										</select>
+									</div> -->
+									<div class="col-md-6">
+										<p style="font-size: 14px;color: #8D99A8;">Masukkan Kata Kunci</p>
+										<form class="input-group" action="data-search.html">
+											<input class="form-control" type="text" placeholder="Data apa yang ingin Anda cari?"><span class="input-group-btn" href="data-search.html"><button class="btn btn-primary" type="submit">Cari</button></span>
+										</form>
+									</div>
+								</div>
+									<br>
+								<div class="row">
+									<div class="col-md-12"><p class="page-title text-left"><a href="data-search.html"><i class="lnr lnr-arrow-left-circle"></i> Kembali</a></p></div></div>
+								<div class="row">
+									<div class="col-md-12">
+							<!-- TABLE STRIPED -->
+								<div class="panel">
+										<div class="panel-body">
+											<h3 class="panel-title" style="font-weight: 500; font-size: 20px; color: #006fcc;">Jumlah Penduduk Berdasarkan Kepemilikan KTP, KK, dan Akta Kelahiran di Sulawesi Tenggara, 2019-2020</h3>
+											<hr><a href="#"><button type="button" class="btn btn-primary" style="font-size: 16px;">Unduh Tabel</button></a><hr>
+											<table class="table table-striped">
+											<thead>
+											<tr>
+												<th>#</th>
+												<th>First Name</th>
+												<th>Last Name</th>
+												<th>Username</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<td>1</td>
+												<td>Steve</td>
+												<td>Jobs</td>
+												<td>@steve</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>Simon</td>
+												<td>Philips</td>
+												<td>@simon</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>Jane</td>
+												<td>Doe</td>
+												<td>@jane</td>
+											</tr>
+											</tbody>
+											</table>
+											<p style="font-size: 14px;color: #8D99A8;">Sumber: <a href="#">Dinas Kependudukan dan Pencatatan Sipil Provinsi Sulawesi Tenggara</a></p>
+											<hr><p class="demo-button">
+												<p style="font-size: 14px;color: #8D99A8;">Lihat Metadata:</a></p>
+												<p>
+													<a class="btn btn-default" data-toggle="collapse" href="#MetadataKegiatan" role="button" aria-expanded="false" aria-controls="#MetadataKegiatan">
+													  Metadata Kegiatan
+													</a>
+													<a class="btn btn-default" data-toggle="collapse" href="#MetadataIndikator" role="button" aria-expanded="false" aria-controls="MetadataIndikator">
+														Metadata Indikator
+													</a>
+													<a class="btn btn-default" data-toggle="collapse" href="#MetadataVariabel" role="button" aria-expanded="false" aria-controls="MetadataVariabel">
+														Metadata Variabel
+													</a>
+												  </p>
+												  <div class="collapse" id="MetadataKegiatan">
+													<div class="col-md-4"></div>
+													<div class="card card-body">
+														<table class="table">
+															<tr>
+																<td>Nama Kegiatan</td>
+																<td width="5";>:</td>
+																<td>Registrasi Data Penduduk Provinsi Sulawesi Tenggara</td>
+															</tr>
+															<tr>
+																<td>Tahun Kegiatan</td>
+																<td width="5";>:</td>
+																<td>2019-2020</td>
+															</tr>
+															<tr>
+																<td>Sektor Kegiatan</td>
+																<td width="5";>:</td>
+																<td>Demografi dan Kependudukan</td>
+															</tr>
+														</table>
+
+														<ul class="nav nav-pills">
+															<li class="active">
+															<a  href="#1a" data-toggle="tab">Informasi Umum</a>
+															</li>
+															<li><a href="#2a" data-toggle="tab">Metodologi</a>
+															</li>
+															<li><a href="#3a" data-toggle="tab">Pengumpulan Data</a>
+															</li>
+															<li><a href="#3a" data-toggle="tab">Pengolahan Data</a>
+															</li>
+															<li><a href="#3a" data-toggle="tab">Diseminasi Hasil</a>
+															</li>
+														</ul>
+
+														<div class="tab-content clearfix">
+															<div class="tab-pane active" id="1a">
+																<table class="table">
+																<tr>
+																	<td>Penyelenggara</td>
+																	<td width="5";>:</td>
+																	<td>Dinas Kependudukan dan Pencatatan Sipil Prov. Sulawesi Tenggara</td>
+																</tr>
+																<tr>
+																	<td>Tujuan dan Manfaat Kegiatan</td>
+																	<td width="5";>:</td>
+																	<td>Mendapatkan data penduduk Provinsi Sulawesi Tenggara yang memiliki KTP, KK, dan Akta Kelahiran</td>
+																</tr>
+																<tr>
+																	<td>Frekuensi Pengumpulan Data</td>
+																	<td width="5";>:</td>
+																	<td>Harian</td>
+																</tr>
+																</table>
+															</div>
+															<div class="tab-pane" id="2a">
+																<table class="table">
+																<tr>
+																	<td>Cara Pengumpulan Data</td>
+																	<td width="5";>:</td>
+																	<td>Kompilasi Produk Administrasi</td>
+																</tr>
+																<tr>
+																	<td>Cakupan Wilayah Pengumpulan Data</td>
+																	<td width="5";>:</td>
+																	<td>Provinsi</td>
+																</tr>
+																<tr>
+																	<td>Unit Observasi</td>
+																	<td width="5";>:</td>
+																	<td>Provinsi</td>
+																</tr>
+																</table>
+															</div>
+														</div>
+
+													</div>
+													</div>
+												  </div>
+												</p>
+											<hr>
+										</div>
+									</div>
+								</div>
+							<!-- END TABLE STRIPED -->
+								</div>
+							  </div>
+						   </div>
+						</div>
+
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN -->
+		<div class="clearfix"></div>
+		<footer>
+			<div class="container-fluid">
+				<p class="copyright">2021 © <a href="https://sultra.bps.go.id">BPS Provinsi Sulawesi Tenggara</a>
+</p>
+			</div>
+		</footer>
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="assets/vendor/chartist/js/chartist.min.js"></script>
+	<script src="assets/scripts/klorofil-common.js"></script>
+	<script>
+	$(function() {
+		var data, options;
+
+		// headline charts
+		data = {
+			labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+			series: [
+				[23, 29, 24, 40, 25, 24, 35],
+				[14, 25, 18, 34, 29, 38, 44],
+			]
+		};
+
+		options = {
+			height: 300,
+			showArea: true,
+			showLine: false,
+			showPoint: false,
+			fullWidth: true,
+			axisX: {
+				showGrid: false
+			},
+			lineSmooth: false,
+		};
+
+		new Chartist.Line('#headline-chart', data, options);
+
+
+		// visits trend charts
+		data = {
+			labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+			series: [{
+				name: 'series-real',
+				data: [200, 380, 350, 320, 410, 450, 570, 400, 555, 620, 750, 900],
+			}, {
+				name: 'series-projection',
+				data: [240, 350, 360, 380, 400, 450, 480, 523, 555, 600, 700, 800],
+			}]
+		};
+
+		options = {
+			fullWidth: true,
+			lineSmooth: false,
+			height: "270px",
+			low: 0,
+			high: 'auto',
+			series: {
+				'series-projection': {
+					showArea: true,
+					showPoint: false,
+					showLine: false
+				},
+			},
+			axisX: {
+				showGrid: false,
+
+			},
+			axisY: {
+				showGrid: false,
+				onlyInteger: true,
+				offset: 0,
+			},
+			chartPadding: {
+				left: 20,
+				right: 20
+			}
+		};
+
+		new Chartist.Line('#visits-trends-chart', data, options);
+
+
+		// visits chart
+		data = {
+			labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+			series: [
+				[6384, 6342, 5437, 2764, 3958, 5068, 7654]
+			]
+		};
+
+		options = {
+			height: 300,
+			axisX: {
+				showGrid: false
+			},
+		};
+
+		new Chartist.Bar('#visits-chart', data, options);
+
+
+		// real-time pie chart
+		var sysLoad = $('#system-load').easyPieChart({
+			size: 130,
+			barColor: function(percent) {
+				return "rgb(" + Math.round(200 * percent / 100) + ", " + Math.round(200 * (1.1 - percent / 100)) + ", 0)";
+			},
+			trackColor: 'rgba(245, 245, 245, 0.8)',
+			scaleColor: false,
+			lineWidth: 5,
+			lineCap: "square",
+			animate: 800
+		});
+
+		var updateInterval = 3000; // in milliseconds
+
+		setInterval(function() {
+			var randomVal;
+			randomVal = getRandomInt(0, 100);
+
+			sysLoad.data('easyPieChart').update(randomVal);
+			sysLoad.find('.percent').text(randomVal);
+		}, updateInterval);
+
+		function getRandomInt(min, max) {
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+	});
+	</script>
+</body>
+
+</html>
